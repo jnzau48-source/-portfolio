@@ -1,0 +1,74 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:black;
+  color:#bfffd6;
+  font-family:Arial;
+  overflow:hidden;
+}
+
+/* MATRIX */
+
+#matrix-canvas{
+  position:fixed;
+  inset:0;
+  z-index:0;
+}
+
+/* LOGO */
+
+#far-wall-logo{
+  position:fixed;
+  top:10%;
+  left:50%;
+  transform:translateX(-50%);
+  color:rgba(0,255,120,0.15);
+  font-size:3rem;
+  z-index:1;
+}
+
+/* PANELS */
+
+.panels-container{
+  position:relative;
+  z-index:2;
+  height:100vh;
+}
+
+.panel{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80%;
+  max-width:800px;
+
+  padding:30px;
+
+  background:rgba(0,0,0,0.4);
+  border:1px solid rgba(0,255,120,0.2);
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:0.6s;
+}
+
+.panel.active{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* BUTTON */
+
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  background:#00ff88;
+  border:none;
+  cursor:pointer;
+}
